@@ -66,6 +66,12 @@ export const assets = {
     file: "outdoor.webp",
     alt: "Outdoor patio seating at Pirates Pit Barbeque.",
   },
+  // ✅ Live — night establishing shot of the whole venue.
+  venueNight: {
+    src: "/images/restaurant/venue-night.webp",
+    file: "venue-night.webp",
+    alt: "Pirates Pit Barbeque at night — the lit smokehouse with the skull mural, smoker glowing, string lights over the patio, and a lantern-lit table.",
+  },
 } as const satisfies Record<string, AssetRef>;
 
 export type AssetKey = keyof typeof assets;

@@ -6,6 +6,7 @@ import { BuiltBySmoke } from "@/components/sections/BuiltBySmoke";
 import { HeavyHitters } from "@/components/sections/HeavyHitters";
 import { FullMenu } from "@/components/sections/FullMenu";
 import { FakeTheSmoke } from "@/components/sections/FakeTheSmoke";
+import { FireNeverGoesOut } from "@/components/sections/FireNeverGoesOut";
 import { Catering } from "@/components/sections/Catering";
 import { FindThePit } from "@/components/sections/FindThePit";
 import { FinalCta } from "@/components/sections/FinalCta";
@@ -26,6 +27,7 @@ export default function Home() {
         <HeavyHitters />
         <FullMenu />
         <FakeTheSmoke />
+        <FireNeverGoesOut />
         <Catering />
         <FindThePit />
         <FinalCta />

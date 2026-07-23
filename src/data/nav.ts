@@ -19,6 +19,7 @@ export const SECTION_IDS = {
   featured: "featured",
   menu: "menu",
   smokeFilm: "smoke-film",
+  fire: "fire",
   catering: "catering",
   find: "find",
   visit: "visit",
