@@ -78,8 +78,8 @@ export const featured: FeaturedItem[] = [
     id: "cornbread",
     name: "Country Cornbread",
     blurb: "Golden edges, tender crumb, a little sweet.",
-    image: null,
-    alt: "Wedge of golden country cornbread.",
+    image: "/images/food/cornbread.webp",
+    alt: "Squares of golden Pirates Pit country cornbread with crisp tops and a tender crumb on a wooden board.",
   },
   {
     id: "banana-pudding",
