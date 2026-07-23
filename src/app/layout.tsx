@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cinzel, Oswald, Inter } from "next/font/google";
 import { siteConfig } from "@/data/site.config";
+import { SmoothScroll } from "@/components/SmoothScroll";
 import "./globals.css";
 
 // Engraved antique-gold display serif — headlines & wordmark
@@ -71,6 +72,7 @@ export default function RootLayout({
       className={`${cinzel.variable} ${oswald.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-charcoal text-bone">
+        <SmoothScroll />
         <a href="#main" className="skip-link">
           Skip to content
         </a>

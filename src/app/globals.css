@@ -78,6 +78,52 @@ body {
   top: 0;
 }
 
+/* ── Lenis smooth scroll (only active when JS attaches the class) ── */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* ── Hero atmosphere ── */
+.hero-smoke {
+  background-image:
+    radial-gradient(40% 60% at 22% 42%, rgba(210, 212, 220, 0.07), transparent 62%),
+    radial-gradient(50% 50% at 72% 30%, rgba(181, 138, 59, 0.06), transparent 62%);
+  background-size: 200% 200%;
+  animation: heroSmokeDrift 42s ease-in-out infinite alternate;
+}
+@keyframes heroSmokeDrift {
+  from {
+    background-position: 0% 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes emberRise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  12% {
+    opacity: var(--ember-opacity, 0.5);
+  }
+  100% {
+    transform: translateY(-140px) scale(0.35);
+    opacity: 0;
+  }
+}
+
 /*
   Reduced-motion baseline. GSAP/Lenis honor this in JS, but we also
   neutralize CSS motion so the experience is complete without scripting.

@@ -20,10 +20,21 @@ export interface AssetRef {
 }
 
 export const assets = {
-  heroSmoke: {
-    src: null,
-    file: "hero-smoke.webp",
-    alt: "Drifting smoke across a near-black smokehouse backdrop.",
+  // ✅ Live EP Media hero assets (Phase 3A).
+  heroBuilding: {
+    src: "/images/restaurant/hero-building.webp",
+    file: "hero-building.webp",
+    alt: "Pirates Pit Barbeque smokehouse at dusk — the skull-and-cutlery mural on charred wood, chimney smoke rising, string lights glowing over the patio.",
+  },
+  heroBuildingMobile: {
+    src: "/images/restaurant/hero-building-mobile.webp",
+    file: "hero-building-mobile.webp",
+    alt: "Pirates Pit Barbeque skull mural and lit ordering window at dusk.",
+  },
+  patioNight: {
+    src: "/images/restaurant/patio-night.webp",
+    file: "patio-night.webp",
+    alt: "Pirates Pit Barbeque patio after dark, lit by string lights and a lantern on a wooden table.",
   },
   heroLogo: {
     src: null,
