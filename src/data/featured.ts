@@ -71,8 +71,8 @@ export const featured: FeaturedItem[] = [
     id: "gouda-mac",
     name: "Smoked Gouda Mac",
     blurb: "Creamy, smoky, and unashamedly rich.",
-    image: null,
-    alt: "Bowl of smoked gouda macaroni and cheese.",
+    image: "/images/food/gouda-mac.webp",
+    alt: "Cast-iron dish of Pirates Pit smoked gouda macaroni with a toasted breadcrumb crust, beside a wedge of gouda.",
   },
   {
     id: "cornbread",
