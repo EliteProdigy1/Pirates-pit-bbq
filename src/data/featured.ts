@@ -85,7 +85,7 @@ export const featured: FeaturedItem[] = [
     id: "banana-pudding",
     name: "Banana Puddin",
     blurb: "Cold, creamy, and the right way to end a plate.",
-    image: null,
-    alt: "Cup of Southern banana pudding topped with wafers.",
+    image: "/images/food/banana-pudding.webp",
+    alt: "Dish of Pirates Pit banana pudding layered with vanilla wafers and banana slices, topped with crumbled wafers.",
   },
 ];
