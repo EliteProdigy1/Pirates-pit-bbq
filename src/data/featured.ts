@@ -57,8 +57,8 @@ export const featured: FeaturedItem[] = [
     id: "smoked-sausage",
     name: "Smoked Sausage",
     blurb: "Snappy casing, coarse grind, deep smoke.",
-    image: null,
-    alt: "Sliced smoked sausage links on a dark board.",
+    image: "/images/food/smoked-sausage.webp",
+    alt: "A ring of Pirates Pit smoked sausage with thick sliced rounds on a wooden board over a warm fire.",
   },
   {
     id: "sampler",
