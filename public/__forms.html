@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+  Static form definition for Netlify's build-time form detection.
+  App Router pages are client-rendered, so Netlify parses THIS file to register
+  the "catering" form and its fields. Keep field names in sync with
+  src/components/forms/CateringForm.tsx.
+-->
+<html lang="en">
+  <head><meta charset="utf-8" /><title>Netlify Forms</title></head>
+  <body>
+    <form name="catering" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="catering" />
+      <input name="bot-field" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="date" name="event_date" />
+      <input type="number" name="guest_count" />
+      <input type="text" name="event_location" />
+      <input type="text" name="preferred_meats" />
+      <textarea name="catering_needs"></textarea>
+      <textarea name="notes"></textarea>
+    </form>
+  </body>
+</html>
