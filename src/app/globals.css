@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/*
+  Pirates Pit Barbeque — brand tokens
+  Dark pirate smokehouse: charcoal, smoked steel, bone white, antique gold,
+  ember orange (used sparingly). See BRAND DIRECTION in project docs.
+*/
+
+:root {
+  --charcoal: #0b0b0c; /* charcoal black  */
+  --smoked: #151619; /* smoked black    */
+  --smoke: #565a61; /* smoke gray      */
+  --bone: #e8e3d9; /* bone white      */
+  --gold: #b58a3b; /* antique gold    */
+  --ember: #b94a22; /* ember orange    */
+
+  --background: var(--charcoal);
+  --foreground: var(--bone);
+}
+
+@theme inline {
+  /* Colors — usable as bg-charcoal, text-gold, border-smoke, etc. */
+  --color-charcoal: var(--charcoal);
+  --color-smoked: var(--smoked);
+  --color-smoke: var(--smoke);
+  --color-bone: var(--bone);
+  --color-gold: var(--gold);
+  --color-ember: var(--ember);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Typography */
+  --font-display: var(--font-cinzel); /* engraved antique-gold headlines */
+  --font-accent: var(--font-oswald); /* condensed industrial eyebrows   */
+  --font-sans: var(--font-inter); /* readable body                   */
+}
+
+/*
+  This site is intentionally dark-only — it is a cinematic smokehouse.
+  We do not swap to a light theme; the dark palette IS the brand.
+*/
+html {
+  color-scheme: dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  /* Prevent horizontal overflow from smoke/parallax layers (skill requirement) */
+  overflow-x: hidden;
+}
+
+/* Accessible, always-visible focus ring in brand gold */
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Skip-navigation link — visible only when focused */
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -3rem;
+  z-index: 100;
+  background: var(--gold);
+  color: var(--charcoal);
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  border-radius: 0 0 4px 4px;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/*
+  Reduced-motion baseline. GSAP/Lenis honor this in JS, but we also
+  neutralize CSS motion so the experience is complete without scripting.
+*/
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
