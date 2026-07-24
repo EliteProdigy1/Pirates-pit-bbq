@@ -4,11 +4,14 @@ import Link from "next/link";
 import { useState } from "react";
 import { navLinks } from "@/data/nav";
 import { siteConfig } from "@/data/site.config";
+import { SHOW_DEPOSIT_BUTTON, depositConfig } from "@/data/review.config";
+import { DepositModal } from "@/components/DepositModal";
 
 /** Sticky site header with a wordmark, in-page nav, and an accessible
  *  mobile menu. Static (no scroll animation) — motion arrives in Phase 3+. */
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [depositOpen, setDepositOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/5 bg-charcoal/80 backdrop-blur-md">
@@ -39,6 +42,19 @@ export function Header() {
               </Link>
             </li>
           ))}
+          {SHOW_DEPOSIT_BUTTON && (
+            <li>
+              {/* Temporary, discreet deposit button (outlined so it doesn't
+                  overpower the Inquire CTA or the restaurant branding). */}
+              <button
+                type="button"
+                onClick={() => setDepositOpen(true)}
+                className="rounded-sm border border-gold/60 px-4 py-2 font-accent text-xs uppercase tracking-widest text-gold transition-colors hover:bg-gold/10"
+              >
+                {depositConfig.label}
+              </button>
+            </li>
+          )}
           <li>
             <Link
               href="#catering"
@@ -104,7 +120,25 @@ export function Header() {
               Call {siteConfig.contact.phone}
             </Link>
           </li>
+          {SHOW_DEPOSIT_BUTTON && (
+            <li>
+              <button
+                type="button"
+                onClick={() => {
+                  setOpen(false);
+                  setDepositOpen(true);
+                }}
+                className="mt-1 block w-full rounded-sm border border-gold/60 px-3 py-3 text-left font-accent text-sm uppercase tracking-widest text-gold hover:bg-gold/10"
+              >
+                {depositConfig.label}
+              </button>
+            </li>
+          )}
         </ul>
+      )}
+
+      {SHOW_DEPOSIT_BUTTON && (
+        <DepositModal open={depositOpen} onClose={() => setDepositOpen(false)} />
       )}
     </header>
   );
