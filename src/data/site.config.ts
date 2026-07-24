@@ -32,8 +32,8 @@ export const siteConfig = {
   // ── Contact ─────────────────────────────────────────────────
   contact: {
     // ✅ VERIFIED by client
-    phone: "(251) 229-6229",
-    phoneHref: "tel:+12512296229",
+    phone: "(251) 223-0812",
+    phoneHref: "tel:+12512230812",
     // ✅ VERIFIED — from menu board (catering inquiries)
     cateringEmail: "piratesbbqpit@gmail.com",
     // ⚠️ TODO: confirm a general contact email (may be same as catering)
