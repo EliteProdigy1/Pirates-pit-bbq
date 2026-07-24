@@ -66,6 +66,12 @@ export const assets = {
     file: "outdoor.webp",
     alt: "Outdoor patio seating at Pirates Pit Barbeque.",
   },
+  // ✅ Live — full-table feast at dusk (final-CTA background).
+  finalFeast: {
+    src: "/images/food/feast.webp",
+    file: "feast.webp",
+    alt: "A full Pirates Pit feast at dusk — brisket, ribs, pulled pork, sausage, and chicken with sides and cornbread, spread on a table in front of the lit smokehouse.",
+  },
   // ✅ Live — night establishing shot of the whole venue.
   venueNight: {
     src: "/images/restaurant/venue-night.webp",
