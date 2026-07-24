@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cinzel, Oswald, Inter } from "next/font/google";
 import { siteConfig } from "@/data/site.config";
 import { SmoothScroll } from "@/components/SmoothScroll";
+import { ReviewPurchaseBar } from "@/components/ReviewPurchaseBar";
 import "./globals.css";
 
 // Engraved antique-gold display serif — headlines & wordmark
@@ -77,6 +78,7 @@ export default function RootLayout({
           Skip to content
         </a>
         {children}
+        <ReviewPurchaseBar />
       </body>
     </html>
   );
