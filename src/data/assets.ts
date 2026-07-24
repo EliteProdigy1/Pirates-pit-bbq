@@ -42,9 +42,9 @@ export const assets = {
     alt: "Pirates Pit Barbeque skull logo with crossed antique-gold knife and fork.",
   },
   storyBrisket: {
-    src: null,
-    file: "brisket.webp",
-    alt: "Sliced smoked brisket resting on a wood board with a deep smoke ring.",
+    src: "/images/food/brisket-story.webp",
+    file: "brisket-story.webp",
+    alt: "A whole Pirates Pit smoked brisket, sliced to show a deep bark and pink smoke ring, resting on a board in front of the fire.",
   },
   smokeFilmPoster: {
     src: null,
