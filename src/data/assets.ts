@@ -52,9 +52,9 @@ export const assets = {
     alt: "Close-up of smoked ribs being sliced, wreathed in smoke.",
   },
   cateringSpread: {
-    src: null,
+    src: "/images/food/catering.webp",
     file: "catering.webp",
-    alt: "Catering pans filled with smoked meats and sides.",
+    alt: "Pirates Pit catering spread — foil trays of brisket, ribs, pulled pork, and sausage with cups of sides, cornbread, sauces, and a branded catering box.",
   },
   building: {
     src: null,
