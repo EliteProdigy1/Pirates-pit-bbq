@@ -1,6 +1,8 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/JsonLd";
+import { HoldScreen } from "@/components/HoldScreen";
+import { SITE_ON_HOLD } from "@/data/review.config";
 import { Hero } from "@/components/sections/Hero";
 import { BuiltBySmoke } from "@/components/sections/BuiltBySmoke";
 import { HeavyHitters } from "@/components/sections/HeavyHitters";
@@ -17,6 +19,12 @@ import { FinalCta } from "@/components/sections/FinalCta";
  * scroll animation is layered on in later phases without restructuring this.
  */
 export default function Home() {
+  // When the site is on hold, render ONLY the lock screen — none of the
+  // restaurant markup is emitted, so the preview can't be viewed or copied.
+  if (SITE_ON_HOLD) {
+    return <HoldScreen />;
+  }
+
   return (
     <>
       <JsonLd />

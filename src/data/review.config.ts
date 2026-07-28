@@ -36,6 +36,27 @@ export const reviewConfig = {
 export const SHOW_DEPOSIT_BUTTON =
   process.env.NEXT_PUBLIC_SHOW_DEPOSIT_BUTTON !== "false"; // default: true
 
+/**
+ * Site hold / lock.
+ *
+ * When ON, the ENTIRE site is replaced by a branded "on hold" screen — the
+ * real restaurant site is not rendered or served, so the preview can't be
+ * viewed or copied while a deal is undecided.
+ *
+ * Currently ON. To unlock (deal is a go): set this to false, OR set the
+ * Netlify env var NEXT_PUBLIC_SITE_ON_HOLD="false" and redeploy.
+ */
+export const SITE_ON_HOLD =
+  process.env.NEXT_PUBLIC_SITE_ON_HOLD !== "false"; // default: on hold
+
+export const holdConfig = {
+  eyebrow: "Pirates Pit Barbeque",
+  headline: "This Preview Is On Hold",
+  message:
+    "This website is reserved by EP Media and is temporarily unavailable. If you'd like to move forward and make it yours, get in touch.",
+  ctaLabel: "Contact EP Media",
+} as const;
+
 export const depositConfig = {
   label: "$500 Deposit",
   modalTitle: "Reserve This Website",

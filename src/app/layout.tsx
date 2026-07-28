@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cinzel, Oswald, Inter } from "next/font/google";
 import { siteConfig } from "@/data/site.config";
+import { SITE_ON_HOLD } from "@/data/review.config";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { ReviewPurchaseBar } from "@/components/ReviewPurchaseBar";
 import "./globals.css";
@@ -60,7 +61,8 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [siteConfig.seo.ogImage],
   },
-  robots: { index: true, follow: true },
+  // No indexing while the site is on hold.
+  robots: { index: !SITE_ON_HOLD, follow: !SITE_ON_HOLD },
   alternates: { canonical: "/" },
 };
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { reviewConfig } from "@/data/review.config";
+import { reviewConfig, SITE_ON_HOLD } from "@/data/review.config";
 
 /**
  * Elite Prodigy "purchase this website" bar for the review/handoff phase.
@@ -13,7 +13,8 @@ import { reviewConfig } from "@/data/review.config";
 export function ReviewPurchaseBar() {
   const [dismissed, setDismissed] = useState(false);
 
-  if (!reviewConfig.enabled || dismissed) return null;
+  // Hidden while the site is on hold — the hold screen carries its own CTA.
+  if (SITE_ON_HOLD || !reviewConfig.enabled || dismissed) return null;
 
   const isExternal = /^https?:\/\//.test(reviewConfig.purchaseUrl);
 
