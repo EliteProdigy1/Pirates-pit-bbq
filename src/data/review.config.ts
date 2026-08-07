@@ -43,11 +43,11 @@ export const SHOW_DEPOSIT_BUTTON =
  * real restaurant site is not rendered or served, so the preview can't be
  * viewed or copied while a deal is undecided.
  *
- * Currently ON. To unlock (deal is a go): set this to false, OR set the
- * Netlify env var NEXT_PUBLIC_SITE_ON_HOLD="false" and redeploy.
+ * Currently OFF (site is live). To put it back on hold: set this to true, OR
+ * set the Netlify env var NEXT_PUBLIC_SITE_ON_HOLD="true" and redeploy.
  */
 export const SITE_ON_HOLD =
-  process.env.NEXT_PUBLIC_SITE_ON_HOLD !== "false"; // default: on hold
+  process.env.NEXT_PUBLIC_SITE_ON_HOLD === "true"; // default: live (off hold)
 
 export const holdConfig = {
   eyebrow: "Pirates Pit Barbeque",
